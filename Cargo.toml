@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "main",
+    "primes",
+    "factor",
+    "modular",
+    "arithfunc"
+]	
