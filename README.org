@@ -1,0 +1,1 @@
+Implementation of basic number theoretic functions. The underlying integer type is ramp::Int.
