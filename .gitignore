@@ -3,3 +3,4 @@
 *.*~
 /main/src/main.rs
 /main/Cargo.toml
+*.tmp
