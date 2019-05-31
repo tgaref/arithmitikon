@@ -50,7 +50,7 @@ fn pr_fact(n: &Int) -> Vec<Int> {
     ps
 }
 
-fn compute_pairs(ps: Vec<Int>) -> Vec<(Int,u32)> {
+fn compute_pairs(ps: Vec<Int>) -> Vec<(Int,usize)> {
     if ps.is_empty() {
         return vec![]
     }
@@ -71,7 +71,7 @@ fn compute_pairs(ps: Vec<Int>) -> Vec<(Int,u32)> {
     result
 }
                            
-pub fn factor(n: &Int) -> Vec<(Int,u32)> {
+pub fn factor(n: &Int) -> Vec<(Int,usize)> {
     if *n == 0 || *n == 1 {
         return vec![]
     }
