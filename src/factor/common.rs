@@ -1,7 +1,5 @@
-extern crate ramp;
+use crate::primes;
 use ramp::Int;
-use std::vec::Vec;
-use primes;
 
 fn remove(n: &mut Int, p: &Int) -> usize {
     let mut e = 0;

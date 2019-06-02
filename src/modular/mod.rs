@@ -1,8 +1,6 @@
-extern crate ramp;
-extern crate factor;
-extern crate arithfunc;
+use crate::factor::pollard;
+use crate::arithfunc;
 use ramp::Int;
-use factor::pollard;
 use std::vec::Vec;
 
 pub fn extgcd(a: &Int, b: &Int) -> (Int, Int, Int) {

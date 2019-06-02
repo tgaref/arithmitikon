@@ -1,7 +1,5 @@
-extern crate ramp;
-extern crate factor;
+use crate::factor::pollard;
 use ramp::Int;
-use factor::pollard;
 
 pub fn totient(n: &Int) -> Int {
     let zero = Int::zero();

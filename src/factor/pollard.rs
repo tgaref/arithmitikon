@@ -1,9 +1,9 @@
-extern crate ramp;
 extern crate rand;
 use ramp::Int;
 use ramp::RandomInt;
 use std::vec::Vec;
-use crate::common;
+use super::common;
+use crate::primes;
 
 fn g(x: &Int, n: &Int) -> Int {
     (x * x + 1) % n

@@ -1,8 +1,6 @@
-extern crate ramp;
 extern crate rand;
 use ramp::Int;
 use ramp::RandomInt;
-use std::vec::Vec;
 
 fn remove_2(n: &Int) -> (u32, Int) {
     let mut s = 0;
