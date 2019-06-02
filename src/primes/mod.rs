@@ -2,6 +2,9 @@ extern crate rand;
 use ramp::Int;
 use ramp::RandomInt;
 
+#[cfg(test)]
+mod tests;
+
 fn remove_2(n: &Int) -> (u32, Int) {
     let mut s = 0;
     let mut d = n.clone();

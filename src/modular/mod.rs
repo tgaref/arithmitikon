@@ -3,6 +3,9 @@ use crate::arithfunc;
 use ramp::Int;
 use std::vec::Vec;
 
+#[cfg(test)]
+mod tests;
+
 pub fn extgcd(a: &Int, b: &Int) -> (Int, Int, Int) {
     if *a < 0 {
         let (d, s, t) = extgcd(&(-a), b);

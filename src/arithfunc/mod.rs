@@ -1,6 +1,9 @@
 use crate::factor::pollard;
 use ramp::Int;
 
+#[cfg(test)]
+mod tests;
+
 pub fn totient(n: &Int) -> Int {
     let zero = Int::zero();
     let one = Int::one();

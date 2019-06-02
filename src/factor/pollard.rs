@@ -72,6 +72,11 @@ fn compute_pairs(ps: Vec<Int>) -> Vec<(Int,usize)> {
 }
                            
 pub fn factor(n: &Int) -> Vec<(Int,usize)> {
+    if *n < 0 {
+        let m = -n;
+        return factor(&m)
+    }
+    
     if *n == 0 || *n == 1 {
         return vec![]
     }
