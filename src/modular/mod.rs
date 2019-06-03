@@ -66,10 +66,10 @@ pub fn invert_mod(a: &Int, n: &Int) -> Option<Int> {
     }
 }
 
-pub fn crt(avec: &Vec<Int>, nvec: &Vec<Int>) -> Int {
+pub fn crt(avec: &Vec<Int>, nvec: &Vec<Int>) -> Result<Int,String> {
     let len = nvec.len();
     if len != avec.len() {
-        panic!("Number of RHS values != number of moduli");
+        return Err("# values != # moduli".to_string());
     }
     let mut n = Int::one();
     for ni in nvec.iter() {
@@ -82,16 +82,15 @@ pub fn crt(avec: &Vec<Int>, nvec: &Vec<Int>) -> Int {
         mi = &n / &nvec[i];
         s = match invert_mod(&mi, &nvec[i]) {
             Some(v) => v,
-            None    => panic!("The moduli are not pairwise coprime!"),
+            None    => return Err("moduli not pairwise coprime!".to_string()),
         };
         result += (&avec[i] * &mi) * s;
     }
-    println!("{:?}", &n);
     result = result % &n;
     if result < 0 {
-        result + n
+        Ok(result + n)
     } else {
-        result
+        Ok(result)
     }
 }
 
